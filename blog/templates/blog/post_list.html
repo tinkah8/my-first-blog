@@ -11,11 +11,11 @@
             <p>A funguje toto?</p>
         </div>
         
-        {% for post in posts %}
+        {% for Post in posts %}
             <div>
-                <p>Publikováno: {{ post.published_date }}</p>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
+                <p>Publikováno: {{ Post.published_date }}</p>
+                <h2><a href="">{{ Post.title }}</a></h2>
+                <p>{{ Post.text|linebreaksbr }}</p>
             </div>
          
         
