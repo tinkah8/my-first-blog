@@ -1,25 +1,14 @@
-<html>
-    <head>
-        <title>Tinkah's blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">Tinkah's blog</a></h1>
-        </div>
 
-        <div>
-            <p>A funguje toto?</p>
-        </div>
-        
-        {% for Post in posts %}
-            <div>
-                <p>Publikováno: {{ Post.published_date }}</p>
-                <h2><a href="">{{ Post.title }}</a></h2>
-                <p>{{ Post.text|linebreaksbr }}</p>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for Post in posts %}
+        <div class="post">
+            <div class="date">
+                <p>Publikováno: {{ Post.published_date }}</p>  
             </div>
-         
-        
-        {% endfor %}
-
-    </body>
-</html>
+            <h2><a href="{% url 'post_detail' pk=Post.pk %}">{{ Post.title }}</a></h2>
+            <p>{{ Post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+ {% endblock %}                
