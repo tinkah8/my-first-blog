@@ -2,8 +2,9 @@
 .page-header {
     background-color: royalblue;
     margin-top: 0;
-    text-align: center;
+    
     padding: 20px;
+    padding-left: 140px;
     vertical-align: middle;
 }
 
@@ -35,23 +36,36 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
+.top-menu  {
     color: palevioletred;
-    float: right;
-    font-size: 26pt;
+    font-size: 15pt;
     margin-right: 20px;
+    display: flex;
+    float: right;
     vertical-align: middle;
+
+    
+}
+
+.top-menu a {
+    color: white;
+    font-size: 15pt;  
+}
+
+.top-menu a:hover, .top-menu a:visited {
+    color: green;
+    font-size: 15pt;
 }
 
 .post {
     margin-bottom: 70px;
-    margin-top: 70px;
+    
    
 }
 
 
 .post h2 a, .post h2 a:visited {
-    color: gold
+    color: gold;
 }
 
 .post h2 {
