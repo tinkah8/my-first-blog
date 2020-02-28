@@ -7,11 +7,16 @@
             <div class="date">
                 <p>Publikováno: {{ post.published_date }}</p>  
             </div>
+        {% else %}
+            <a class="btn btn-info" href="{% url 'post_publish' pk=post.pk %}">Publikovat</a>
+
         {% endif %}
+        <a href="{% url 'post_edit' pk=post.pk %}"><button type="button" class="btn btn-info"><img src="/static/img/pencil.svg" alt="" width="32" height="32" title="Změnit příspěvek"></button></a>
+        <a class="btn btn-info" href="{% url 'post_remove' pk=post.pk %}"><img src="/static/img/x.svg" alt="" width="32" height="32" title="Odstranit příspěvek"></a>
+
         <h2>{{ post.title }}</h2>
         
         <p>{{ post.text|linebreaksbr }}</p>
-        <a href="{% url 'post_edit' pk=post.pk %}"><button type="button" class="btn btn-info"><img src="/static/img/pencil.svg" alt="" width="32" height="32" title="Změnit příspěvek"></button></a>
 
     </div>
    
